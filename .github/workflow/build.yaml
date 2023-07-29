@@ -56,4 +56,3 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./Middleware/bin/Debug/net7.0/ObservabilityPlugin.dll
           asset_name: ObservabilityPlugin-${{ steps.get-tag.outputs.modified_tag }}.dll
-        

@@ -2,7 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using OpenTelemetry.Logs;
 
-namespace DotnetMwPlugin.Logger;
+namespace Middleware.Logger;
 
 public class Logger
 {

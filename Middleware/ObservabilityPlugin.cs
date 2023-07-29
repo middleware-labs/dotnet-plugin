@@ -1,12 +1,12 @@
 ﻿using OpenTelemetry.Resources;
 
-namespace DotnetMwPlugin;
+namespace Middleware;
 
-public class DotnetPlugin
+public class ObservabilityPlugin
 {
     public void Initializing()
     {
-        Console.WriteLine("Initializing DotnetPlugin");  
+        Console.WriteLine("Initializing ObservabilityPlugin");  
     }
     
     public ResourceBuilder ConfigureResource(ResourceBuilder builder)
