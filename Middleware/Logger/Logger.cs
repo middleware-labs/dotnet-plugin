@@ -9,7 +9,7 @@ public class Logger
     private static readonly ServiceProvider ServiceProvider = new ServiceCollection()
         .AddLogging(
             loggingBuilder => loggingBuilder
-                .SetMinimumLevel(LogLevel.Warning)
+                .SetMinimumLevel(LogLevel.Debug)
                 .AddOpenTelemetry(
                     options => options.AddConsoleExporter()
                     )
@@ -45,11 +45,11 @@ public class Logger
     
     private static void Log(string log, LogLevel logLevel)
     {
-        LoggerInstance.Log(logLevel, "{Log}", log);
+        LoggerInstance.Log(logLevel, log);
     }
     
     private static void Log(Exception exception)
     {
-        LoggerInstance.LogError(exception, "{ExceptionMessage}", exception.Message);
+        LoggerInstance.LogError(exception, exception.Message);
     }
 }

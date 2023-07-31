@@ -7,6 +7,7 @@ public class ObservabilityPlugin
     public void Initializing()
     {
         Console.WriteLine("Initializing ObservabilityPlugin");  
+        Console.WriteLine("Version: v1.0.0");
     }
     
     public ResourceBuilder ConfigureResource(ResourceBuilder builder)
