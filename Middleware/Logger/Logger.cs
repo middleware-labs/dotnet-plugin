@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using OpenTelemetry.Logs;
@@ -41,6 +42,12 @@ public class Logger
     public static void Error(Exception exception)
     {
         Log(exception);
+    }
+
+    public static void SetAttribute(string key, object? value)
+    {
+        var activity = Activity.Current;
+        activity?.SetTag(key, value);
     }
     
     private static void Log(string log, LogLevel logLevel)
